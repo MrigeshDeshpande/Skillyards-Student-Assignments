@@ -1,22 +1,32 @@
 let currentLight = 0;
-const lights = document.querySelectorAll('.light');
+const redLight = document.getElementById('red');
+const yellowLight = document.getElementById('yellow');
+const greenLight = document.getElementById('green');
 
 function changeLight() {
-    if (lights.length === 0) {
-        console.error('No lights found');
-        return;
+    // Turn off all lights
+    redLight.classList.remove('on');
+    yellowLight.classList.remove('on');
+    greenLight.classList.remove('on');
+
+    // Turn on the current light based on currentLight
+    switch (currentLight) {
+        case 0:
+            redLight.classList.add('on');
+            break;
+        case 1:
+            yellowLight.classList.add('on');
+            break;
+        case 2:
+            greenLight.classList.add('on');
+            break;
+        default:
+            console.error('Invalid light index:', currentLight);
+            return;
     }
 
-    // Turn off all lights
-    lights.forEach(light => {
-        light.classList.remove('on');
-    });
-
-    // Turn on the current light
-    lights[currentLight].classList.add('on');
-
     // Move to the next light
-    currentLight = (currentLight + 1) % lights.length;
+    currentLight = (currentLight + 1) % 3;
 }
 
 document.getElementById('start').addEventListener('click', changeLight);
