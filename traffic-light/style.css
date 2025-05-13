@@ -20,12 +20,16 @@ body{
     margin: 10px ;
 }
 
-.red{
+.red, .yellow, .green{
+background-color: gray;
+}
+
+.red.on{
     background-color: red;
 }
-.green{
+.green.on{
     background-color: green;
 }
-.yellow{
+.yellow.on{
     background-color: yellow;
 }
