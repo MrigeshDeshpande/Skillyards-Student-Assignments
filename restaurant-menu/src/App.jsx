@@ -1,33 +1,15 @@
 import { useState } from 'react';
+import MenuItem from './components/MenuItem';
+import { menuItems, categoryDisplayNames } from './data/MenuItem';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const menuItems = [
-    { id: 1, name: 'Samosa', price: 40, category: 'appetizers' },
-    { id: 2, name: 'Paneer Tikka', price: 150, category: 'appetizers' },
-    { id: 3, name: 'Dahi Puri', price: 120, category: 'appetizers' },
-    { id: 4, name: 'Butter Chicken', price: 300, category: 'main' },
-    { id: 5, name: 'Paneer Butter Masala', price: 280, category: 'main' },
-    { id: 6, name: 'Biryani', price: 250, category: 'main' },
-    { id: 7, name: 'Dal Tadka', price: 180, category: 'main' },
-    { id: 8, name: 'Gulab Jamun', price: 100, category: 'desserts' },
-    { id: 9, name: 'Rasgulla', price: 90, category: 'desserts' },
-    { id: 10, name: 'Jalebi', price: 80, category: 'desserts' },
-  ];
-
   const filteredItems = menuItems.filter(item => 
     (selectedCategory === 'all' || item.category === selectedCategory) &&
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const categoryDisplayNames = {
-    all: 'All Items',
-    appetizers: 'Appetizers',
-    main: 'Main Course',
-    desserts: 'Desserts'
-  };
 
   const handleClearSearch = () => {
     setSearchTerm('');
@@ -82,13 +64,7 @@ function App() {
           ) : (
             <div className="space-y-3">
               {filteredItems.map(item => (
-                <div 
-                  key={item.id} 
-                  className="flex justify-between p-4 bg-gray-50 rounded-md hover:bg-green-50 transition"
-                >
-                  <span className="font-bold text-gray-800">{item.name}</span>
-                  <span className="font-bold text-pink-600">₹{item.price}</span>
-                </div>
+                <MenuItem key={item.id} item={item} />
               ))}
             </div>
           )}
