@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Restaurant Menu-Card </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <img src="sumit.webp" alt="Restaurant Logo" class="logo">
+        <h1>All-in-one Menu-Card</h1>
+    </header>
+
+
+    <div class="menu-container">
+        <h1> All-in-one Menu-Card</h1>
+
+        <input type="text" id="searchBox" placeholder="Search for a dish...">
+
+        <div class="buttons">
+            <button onclick="filterMenu('all')">All</button>
+            <button onclick="filterMenu('appetizers')">Appetizers</button>
+            <button onclick="filterMenu('main')">Main Course</button>
+            <button onclick="filterMenu('desserts')">Desserts</button>
+        </div>
+
+        <div id="menu">
+            <!-- Appetizers -->
+            <h2>Appetizers</h2>
+            <div class="menu-item" data-category="appetizers">Samosa - ₹40</div>
+            <div class="menu-item" data-category="appetizers">Paneer Tikka - ₹150</div>
+            <div class="menu-item" data-category="appetizers">Dahi Puri - ₹120</div>
+
+            <!-- Main Course -->
+            <h2>Main Course</h2>
+            <div class="menu-item" data-category="main">Butter Chicken - ₹300</div>
+            <div class="menu-item" data-category="main">Paneer Butter Masala - ₹280</div>
+            <div class="menu-item" data-category="main">Biryani - ₹250</div>
+            <div class="menu-item" data-category="main">Dal Tadka - ₹180</div>
+
+            <!-- Desserts -->
+            <h2>Desserts</h2>
+            <div class="menu-item" data-category="desserts">Gulab Jamun - ₹100</div>
+            <div class="menu-item" data-category="desserts">Rasgulla - ₹90</div>
+            <div class="menu-item" data-category="desserts">Jalebi - ₹80</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

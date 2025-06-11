@@ -1,0 +1,87 @@
+body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 20px;
+}
+
+.menu-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f7d794;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 32px;
+}
+
+h2 {
+    color: #ff0000;
+    font-size: 24px;
+    border-bottom: 2px solid #d62828;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    background-color: #c70039;
+}
+
+#menu {
+    margin-top: 20px;
+}
+
+.menu-item {
+    padding: 10px;
+    margin: 8px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #ff7b00;
+}
+
+.hidden {
+    display: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    left:20px;
+    height: 100px;
+}
