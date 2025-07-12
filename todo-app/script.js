@@ -1,6 +1,6 @@
 const vishakha = document.getElementById("todo-input");
-const sachin = document.getElementById("todo-button");
-const jaadugar = document.getElementById("todo-list");
+// const sachin = document.getElementById("todo-button");
+// const jaadugar = document.getElementById("todo-list");
 
 let todos = {};
 

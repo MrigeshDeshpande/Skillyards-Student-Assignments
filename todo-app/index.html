@@ -16,6 +16,31 @@
     <ul id="todo-list"></ul>
     </div>
 
+    <button id="fireBtn">Fire Laser</button>
+<script>
+  function throttle(func, delay) {
+    let canRun = true;
+    return function () {
+      if (canRun) {
+        func();
+        canRun = false;
+        setTimeout(() => {
+          canRun = true;
+        }, delay);
+      }
+    };
+  }
+
+  function fireLaser() {
+    console.log("💥 Laser Fired!");
+  }
+
+  const throttledFire = throttle(fireLaser, 2000);
+
+  document.getElementById("fireBtn").addEventListener("click", throttledFire);
+</script>
+
+
     <script src="script.js"></script>
     
 </body>
